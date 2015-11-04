@@ -1,3 +1,5 @@
 ﻿Tuntikirjanpito:
 30.10.2015:
-	Prjoketin pystytys ja konffaus
+	Projektin pystytys ja konffaus 3h
+4.11.2015:
+	Projektin hahmottelua ja luokkien sekä niiden testien alustavaa kokoamista.

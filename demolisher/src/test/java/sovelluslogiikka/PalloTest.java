@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Leo
  */
-public class ReunatTest {
+public class PalloTest {
     
-    public ReunatTest() {
+    public PalloTest() {
     }
     
     @BeforeClass
@@ -38,8 +38,7 @@ public class ReunatTest {
     }
 
     @Test
-    public void testaaPallonTormaaminenOikein(){
-        
-    }
+    public void testaaPallonKaantyminen() {
     
+    }
 }
