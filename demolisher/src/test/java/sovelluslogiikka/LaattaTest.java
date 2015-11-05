@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Leo
  */
-public class PalloTest {
+public class LaattaTest {
     
-    public PalloTest() {
+    public LaattaTest() {
     }
     
     @BeforeClass
@@ -37,12 +37,4 @@ public class PalloTest {
     public void tearDown() {
     }
 
-    @Test
-    public void testaaPallonKaantyminen() {
-        Pallo pallo = new Pallo(100, 100, 4, 4);
-        pallo.kaanny(true);
-        assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
-        pallo.kaanny(false);
-        assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);
-    }
 }
