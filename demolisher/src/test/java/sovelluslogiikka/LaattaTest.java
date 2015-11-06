@@ -5,6 +5,7 @@
  */
 package sovelluslogiikka;
 
+import java.awt.Color;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,4 +38,16 @@ public class LaattaTest {
     public void tearDown() {
     }
 
+    @Test
+    public void testPallontormaaminenYlhaalta(){
+        Pallo pallo = new Pallo(150, 100, 4, -4);
+        Laatta laatta1 = new Laatta(100, 100, Color.BLACK);
+        laatta1.tormaa(pallo); //pallo kääntyy
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
+        Laatta laatta2 = new Laatta(0, 0, Color.BLUE);
+        laatta2.tormaa(pallo); //pallo ei käänny
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
+    }
+            
+    
 }

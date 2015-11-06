@@ -17,7 +17,18 @@ public class Laatta implements Blockeri{
     
     @Override
     public void tormaa(Pallo pallo) {
-        
+        if(pallo.getX() >= x && pallo.getX() <= x+50){
+            if(pallo.getY() >= y-5 && pallo.getY() <= y) //törmäys ylhäältä
+                pallo.kaanny(true);
+            if(pallo.getY() >= y+20 && pallo.getY() <= y+25) //törmäys alhaalta
+                pallo.kaanny(true);
+        }
+        if(pallo.getX() >= y && pallo.getX() <= y+20){
+            if(pallo.getY() >= x-5 && pallo.getY() <= x) //törmäys vasemmalta
+                pallo.kaanny(false);
+            if(pallo.getY() >= x+50 && pallo.getY() <= x+55) //törmäys oikealta
+                pallo.kaanny(false);
+        }        
     }
 
     @Override
