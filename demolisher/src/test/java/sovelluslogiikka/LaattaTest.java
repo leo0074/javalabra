@@ -5,7 +5,9 @@
  */
 package sovelluslogiikka;
 
+import graphicsMock.GraphicsMock;
 import java.awt.Color;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -39,15 +41,79 @@ public class LaattaTest {
     }
 
     @Test
-    public void testPallontormaaminenYlhaalta(){
-        Pallo pallo = new Pallo(150, 100, 4, -4);
-        Laatta laatta1 = new Laatta(100, 100, Color.BLACK);
-        laatta1.tormaa(pallo); //pallo kääntyy
-        assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
-        Laatta laatta2 = new Laatta(0, 0, Color.BLUE);
-        laatta2.tormaa(pallo); //pallo ei käänny
+    public void testaaEtteiPalloKäännyTurhaan(){
+        Pallo pallo = new Pallo(250, 200, 4, 4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
     }
-            
+    
+    @Test
+    public void testPallontormaaminenYlhaalta(){
+        Pallo pallo = new Pallo(140, 100, 4, -4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
+        
+        pallo = new Pallo(140, 95, 4, -4);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);        
+        
+        
+    }
+    
+    @Test
+    public void testPallontormaaminenAlhaalta(){
+        Pallo pallo = new Pallo(125, 125, 4, 4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
+        
+        pallo = new Pallo(120, 120, 4, 4);
+        laatta.tormaa(pallo);
+        System.out.println(pallo.getDx());
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);        
+        
+    }    
+    
+    @Test
+    public void testPallontormaaminenVasemmalta(){
+        Pallo pallo = new Pallo(100, 115, 4, -4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);
+        
+        pallo = new Pallo(95, 115, 4, -4);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);        
+        
+    }        
+
+    @Test
+    public void testPallontormaaminenOikealta(){
+        Pallo pallo = new Pallo(155, 110, -4, -4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
+        
+        pallo = new Pallo(150, 110, -4, -4);
+        laatta.tormaa(pallo);
+        assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);        
+        
+    }      
+    
+    @Test
+    public void testaaLaatanPiirtyminen(){
+        Laatta laatta = new Laatta(350, 245, Color.BLUE);
+        GraphicsMock g = new GraphicsMock();
+        laatta.paint(g);
+        ArrayList<Integer> koord = g.getKoordinaatit();
+        assertTrue(koord.get(0) == 350);
+        assertTrue(koord.get(1) == 245);
+        assertTrue(koord.get(2) == 400);
+        assertTrue(koord.get(3) == 265);
+        assertTrue(g.getColor() == Color.BLUE);
+    }
+    
     
 }

@@ -23,10 +23,10 @@ public class Laatta implements Blockeri{
             if(pallo.getY() >= y+20 && pallo.getY() <= y+25) //törmäys alhaalta
                 pallo.kaanny(true);
         }
-        if(pallo.getX() >= y && pallo.getX() <= y+20){
-            if(pallo.getY() >= x-5 && pallo.getY() <= x) //törmäys vasemmalta
+        if(pallo.getY() >= y && pallo.getY() <= y+20){
+            if(pallo.getX() >= x-5 && pallo.getX() <= x) //törmäys vasemmalta
                 pallo.kaanny(false);
-            if(pallo.getY() >= x+50 && pallo.getY() <= x+55) //törmäys oikealta
+            if(pallo.getX() >= x+50 && pallo.getX() <= x+55) //törmäys oikealta
                 pallo.kaanny(false);
         }        
     }

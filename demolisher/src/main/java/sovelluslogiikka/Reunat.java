@@ -29,8 +29,7 @@ public class Reunat implements Blockeri{
     }
 
     @Override
-    public void paint(Graphics g) {
-        
+    public void paint(Graphics g) {     
     }
 
 }

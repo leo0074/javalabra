@@ -1,5 +1,5 @@
 
-package main;
+package kayttoliittyma;
 
 
 public class Main {

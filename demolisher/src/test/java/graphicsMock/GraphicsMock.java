@@ -1,5 +1,9 @@
 package graphicsMock;
 
+/**
+ * Feikkigrafiikka, jota hyödynnetään piirtämisen testauksessa.
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
@@ -9,9 +13,25 @@ import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.image.ImageObserver;
 import java.text.AttributedCharacterIterator;
+import java.util.ArrayList;
 
 public class GraphicsMock extends Graphics{
-
+    private ArrayList<Integer> koordinaatit;
+    private Color vari;
+    private int piirrot;
+    public GraphicsMock(){
+        this.koordinaatit = new ArrayList<>();
+        piirrot = 0;
+    }
+    
+    public int getPiirrot(){
+        return piirrot;
+    }
+    
+    public ArrayList<Integer> getKoordinaatit(){
+        return koordinaatit;
+    }
+    
     @Override
     public Graphics create() {
         return this;
@@ -24,12 +44,12 @@ public class GraphicsMock extends Graphics{
 
     @Override
     public Color getColor() {
-        return null;
+        return vari;
     }
 
     @Override
     public void setColor(Color color) {
-    
+        this.vari = color;
     }
 
     @Override
@@ -94,7 +114,11 @@ public class GraphicsMock extends Graphics{
 
     @Override
     public void fillRect(int i, int i1, int i2, int i3) {
-   
+        koordinaatit.add(i);
+        koordinaatit.add(i1);
+        koordinaatit.add(i2);
+        koordinaatit.add(i3);
+        piirrot++;
     }
 
     @Override
@@ -119,7 +143,11 @@ public class GraphicsMock extends Graphics{
 
     @Override
     public void fillOval(int i, int i1, int i2, int i3) {
-  
+        koordinaatit.add(i);
+        koordinaatit.add(i1);
+        koordinaatit.add(i+i2);
+        koordinaatit.add(i1+i3);     
+        piirrot++;
     }
 
     @Override
