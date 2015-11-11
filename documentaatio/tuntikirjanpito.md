@@ -7,3 +7,7 @@
 	Luokka lisää ja testejä 2h
 6.11.2015.
 	Koordinaaitston suunnittelu, Laattaluokan lisäys, luokkakaavion piirto. 5h
+8.11.2015
+	Mutanttien tappoa sekä uusia luokkia ja testejä 3h
+11.11.2015
+	Lauta-luokka, sille testit. Muiden testien hiomista ja graaffisen käyttöliittymän aloittelu

@@ -23,6 +23,7 @@ public class Laatta implements Blockeri{
             if(pallo.getY() >= y+20 && pallo.getY() <= y+25) //törmäys alhaalta
                 pallo.kaanny(true);
         }
+        
         if(pallo.getY() >= y && pallo.getY() <= y+20){
             if(pallo.getX() >= x-5 && pallo.getX() <= x) //törmäys vasemmalta
                 pallo.kaanny(false);
@@ -34,7 +35,7 @@ public class Laatta implements Blockeri{
     @Override
     public void paint(Graphics g) {
         g.setColor(vari);
-        g.fillRect(x, y, x+50, y+20);        
+        g.fillRect(x, y, 50, 20);        
     }
 
 }

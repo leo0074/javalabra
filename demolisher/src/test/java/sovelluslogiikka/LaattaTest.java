@@ -8,10 +8,6 @@ package sovelluslogiikka;
 import graphicsMock.GraphicsMock;
 import java.awt.Color;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -23,25 +19,10 @@ public class LaattaTest {
     
     public LaattaTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+
 
     @Test
-    public void testaaEtteiPalloKäännyTurhaan(){
+    public void testaaEtteiPalloKaannyTurhaan(){
         Pallo pallo = new Pallo(250, 200, 4, 4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -114,6 +95,4 @@ public class LaattaTest {
         assertTrue(koord.get(3) == 265);
         assertTrue(g.getColor() == Color.BLUE);
     }
-    
-    
 }

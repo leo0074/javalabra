@@ -2,13 +2,17 @@ package sovelluslogiikka;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
+import javax.swing.JPanel;
 import kentat.Kentta1;
 
-public class Kentta {
+public class Kentta extends JPanel{
     private ArrayList<Blockeri> blockerit;
     private Pallo pallo;
+    private Lauta lauta;
     public Kentta(){
-
+        blockerit = Kentta1.luoBlockerit();
+        pallo = Kentta1.luoPallo();
+        lauta = new Lauta(215);
     }
     
     public ArrayList<Blockeri> getBlockerit(){
@@ -19,16 +23,13 @@ public class Kentta {
         return pallo;
     }
     
-    public void luo(int kenttaNro){
-        blockerit = Kentta1.luoBlockerit();
-        pallo = Kentta1.luoPallo();
-    }
-    
-    public void paint(Graphics g){
+    @Override
+    public void paintComponent(Graphics g){
         for(Blockeri blockeri : blockerit){
             blockeri.paint(g);
-            pallo.paint(g);
         }
+        pallo.paint(g);
+        lauta.paint(g);
     }
     
 }

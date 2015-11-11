@@ -22,35 +22,17 @@ public class KenttaTest {
     public KenttaTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-    
     @Test
     public void testaaLuonti(){
         Kentta kentta = new Kentta();
-        kentta.luo(1);
         assertTrue(kentta.getBlockerit() != null && kentta.getPallo() != null);       
     }
     
     @Test
     public void testaaPiirto(){
         Kentta kentta = new Kentta();
-        kentta.luo(1);
         GraphicsMock g = new GraphicsMock();
-        kentta.paint(g);
+        kentta.paintComponent(g);
         assertTrue(!g.getKoordinaatit().isEmpty());
         assertTrue(g.getColor()!=null);
         assertTrue(g.getPiirrot() >= 3);

@@ -32,6 +32,9 @@ public class Pallo {
         return this.dy;
     }    
     
+    public void setdx(int dx){
+        this.dx = dx;
+    }
     
     /**
     * Metodi kääntää pallon suuntaan sen osuessa esteeseen

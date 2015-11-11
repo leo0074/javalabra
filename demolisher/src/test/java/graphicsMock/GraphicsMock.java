@@ -116,8 +116,8 @@ public class GraphicsMock extends Graphics{
     public void fillRect(int i, int i1, int i2, int i3) {
         koordinaatit.add(i);
         koordinaatit.add(i1);
-        koordinaatit.add(i2);
-        koordinaatit.add(i3);
+        koordinaatit.add(i+i2);
+        koordinaatit.add(i1+i3);
         piirrot++;
     }
 
