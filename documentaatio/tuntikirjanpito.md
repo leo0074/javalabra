@@ -1,25 +1,19 @@
 # ﻿Tuntikirjanpito:
 
 30.10.2015:
-
-	Projektin pystytys ja konffaus 3h
+Projektin pystytys ja konffaus 3h
 
 4.11.2015:
-
-	Projektin hahmottelua ja luokkien sekä niiden testien alustavaa kokoamista. 3h
+Projektin hahmottelua ja luokkien sekä niiden testien alustavaa kokoamista. 3h
 
 5.11.2015:
-
-	Luokka lisää ja testejä 2h
+Luokka lisää ja testejä 2h
 
 6.11.2015.
-
-	Koordinaaitston suunnittelu, Laattaluokan lisäys, luokkakaavion piirto. 5h
+Koordinaaitston suunnittelu, Laattaluokan lisäys, luokkakaavion piirto. 5h
 
 8.11.2015
-
-	Mutanttien tappoa sekä uusia luokkia ja testejä 3h
+Mutanttien tappoa sekä uusia luokkia ja testejä 3h
 
 11.11.2015
-
-	Lauta-luokka, sille testit. Muiden testien hiomista ja graaffisen käyttöliittymän aloittelu 3h
+Lauta-luokka, sille testit. Muiden testien hiomista ja graaffisen käyttöliittymän aloittelu 3h

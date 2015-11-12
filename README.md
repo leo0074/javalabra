@@ -8,6 +8,6 @@ Käyttäjät: pelaaja
 
 pelaajan toiminnot:
 
-	kentän valitseminen
+-kentän valitseminen
 
-	laudan siirtäminen kentässä hiiren avulla
+-laudan siirtäminen kentässä hiiren avulla
