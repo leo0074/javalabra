@@ -12,9 +12,7 @@ public class Kayttoliittyma implements Runnable{
     public void run() {
         JFrame frame = new JFrame("Demolitionist");
         frame.setPreferredSize(new Dimension(500, 700));
-
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         frame.getContentPane().add(new Kentta());
         frame.setBackground(Color.WHITE);
         frame.pack();

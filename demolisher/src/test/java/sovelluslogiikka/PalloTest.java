@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sovelluslogiikka;
 
 import graphicsMock.GraphicsMock;
 import java.awt.Color;
-import java.awt.Graphics;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -16,10 +11,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Leo
- */
 public class PalloTest {
     
     public PalloTest() {
@@ -61,6 +52,16 @@ public class PalloTest {
         assertTrue(koord.get(2) == 255);
         assertTrue(koord.get(3) == 150);
         assertTrue(g.getColor() == Color.black);
+    }
+    
+    @Test
+    public void testaaPallonLiikkuminen(){
+        Pallo pallo = new Pallo(250, 145, 1, 4);
+        pallo.liiku();
+        assertTrue(pallo.getX() == 251);
+        assertTrue(pallo.getY() == 149);
+        
+        
     }
     
 }

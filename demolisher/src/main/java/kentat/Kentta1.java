@@ -6,11 +6,6 @@ import sovelluslogiikka.*;
 
 public class Kentta1 {
     
-    
-    public static Pallo luoPallo(){
-       return new Pallo(250, 500, 0, -4);
-    }
-    
     public static ArrayList<Blockeri> luoBlockerit(){
         ArrayList<Blockeri> blockerit = new ArrayList<>();
         blockerit.add(new Reunat());

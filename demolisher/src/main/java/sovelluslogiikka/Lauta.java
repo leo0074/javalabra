@@ -15,8 +15,10 @@ public class Lauta implements Blockeri{
     public void tormaa(Pallo pallo) {
         if(pallo.getY() >= y-5 && pallo.getY() <= y){
             for(int k = 0; k <= 80; k = k+10){
-                if(pallo.getX() >= x+k && pallo.getDx() < x+k+10)
+                if(pallo.getX() >= x+k && pallo.getDx() < x+k+10){
+                    pallo.kaanny(true);
                     pallo.setdx(-4+(int)k/10);
+                }    
             }           
         }
     }

@@ -33,6 +33,7 @@ public class LautaTest {
             
         pallo = new Pallo(260, 550, 4, 4);
         lauta.tormaa(pallo);
+        System.out.println(pallo.getDx());
         assertTrue(pallo.getDx() == -3);
         
         pallo = new Pallo(270, 550, 4, 4);
@@ -62,9 +63,7 @@ public class LautaTest {
         pallo = new Pallo(330, 550, 4, 4);
         lauta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4);        
-        
-        
-        
+       
     }
     
     

@@ -1,4 +1,4 @@
-# ﻿Tuntikirjanpito:
+﻿# ﻿Tuntikirjanpito:
 
 30.10.2015:
 Projektin pystytys ja konffaus 3h
@@ -17,3 +17,6 @@ Mutanttien tappoa sekä uusia luokkia ja testejä 3h
 
 11.11.2015
 Lauta-luokka, sille testit. Muiden testien hiomista ja graaffisen käyttöliittymän aloittelu 3h
+
+15.11.2015
+Päivittäjä-luokan alustus. Lisää testejä. 1h
