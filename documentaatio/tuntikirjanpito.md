@@ -20,3 +20,6 @@ Lauta-luokka, sille testit. Muiden testien hiomista ja graaffisen käyttöliitty
 
 15.11.2015
 Päivittäjä-luokan alustus. Lisää testejä. 1h
+
+16.11.2015
+Käyttätoimintojen luonti, Lisää luokkia ja testejä. 3h

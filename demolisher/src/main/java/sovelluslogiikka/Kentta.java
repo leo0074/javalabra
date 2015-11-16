@@ -12,22 +12,37 @@ public class Kentta extends JPanel{
     private Lauta lauta;
     private Paivittaja paivittaja;
     private Timer timer;
+    private boolean paalla;
     
     public Kentta(){
         blockerit = Kentta1.luoBlockerit();
         pallo = new Pallo(250, 500, 0, -4);
         lauta = new Lauta(215);
-        paivittaja = new Paivittaja(pallo, blockerit, lauta);
+        paivittaja = new Paivittaja(this);
         timer = new Timer();
+        paalla = false;
     }
     
     public void start(){     
-        timer.scheduleAtFixedRate(paivittaja, 100, 100);
+        if(!paalla)
+            timer.scheduleAtFixedRate(paivittaja, 100, 12);
+        paalla = true;
     }
     
+    public void pause(){
+        paalla = false;
+    }
+    
+    public boolean onPaalla(){
+        return paalla;
+    }
     
     public ArrayList<Blockeri> getBlockerit(){
         return blockerit;
+    }
+    
+    public Lauta getLauta(){
+        return lauta;
     }
     
     public Pallo getPallo(){
@@ -36,6 +51,7 @@ public class Kentta extends JPanel{
     
     @Override
     public void paintComponent(Graphics g){
+        super.paintComponent(g);
         for(Blockeri blockeri : blockerit){
             blockeri.paint(g);
         }

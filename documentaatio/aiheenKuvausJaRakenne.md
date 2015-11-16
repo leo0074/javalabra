@@ -5,3 +5,4 @@ Käyttäjät: pelaaja
 pelaajan toiminnot:
 	kentän valitseminen
 	laudan siirtäminen kentässä hiiren avulla
+	pelin aloittaminen ja keskeyttäminen

@@ -2,6 +2,8 @@ package sovelluslogiikka;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.MouseInfo;
+import java.awt.PointerInfo;
 
 public class Lauta implements Blockeri{
     int x; //laudan vasemman osan x-koordinaatti
@@ -10,14 +12,30 @@ public class Lauta implements Blockeri{
         this.x = x;
         this.y = 550;
     }
-
+    
+    public int getX(){
+        return x;
+    }
+    
+    public void siirry(){
+        int x = haeHiirenX();
+        if(x >= 45 && x  <= 455)
+            this.x = x - 45;
+    }
+    
+    private int haeHiirenX(){
+        PointerInfo hiiri = MouseInfo.getPointerInfo();
+        return (int) hiiri.getLocation().getX();
+    }
+    
     @Override
     public void tormaa(Pallo pallo) {
         if(pallo.getY() >= y-5 && pallo.getY() <= y){
             for(int k = 0; k <= 80; k = k+10){
-                if(pallo.getX() >= x+k && pallo.getDx() < x+k+10){
-                    pallo.kaanny(true);
+                if(pallo.getX() >= x+k && pallo.getX() < x+k+10){
+                    pallo.setdy(-4);
                     pallo.setdx(-4+(int)k/10);
+                    break;
                 }    
             }           
         }

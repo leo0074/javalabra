@@ -30,6 +30,7 @@ public class LautaTest {
         Lauta lauta = new Lauta(250);
         lauta.tormaa(pallo);
         assertTrue(pallo.getDx() == -4);
+        assertTrue(pallo.getDy() == -4);
             
         pallo = new Pallo(260, 550, 4, 4);
         lauta.tormaa(pallo);
@@ -62,9 +63,12 @@ public class LautaTest {
         
         pallo = new Pallo(330, 550, 4, 4);
         lauta.tormaa(pallo);
-        assertTrue(pallo.getDx() == 4);        
-       
+        assertTrue(pallo.getDx() == 4);               
     }
-    
+    @Test
+    public void testaaGetteri(){
+        Lauta lauta = new Lauta(250);
+        assertTrue(lauta.getX() == 250);
+    }
     
 }

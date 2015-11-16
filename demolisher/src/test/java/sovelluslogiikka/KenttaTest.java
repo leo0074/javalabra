@@ -26,5 +26,14 @@ public class KenttaTest {
         assertTrue(g.getPiirrot() >= 3);
     }
     
+    @Test
+    public void testaaStartJaPause(){
+        Kentta kentta = new Kentta();
+        kentta.start();
+        assertTrue(kentta.onPaalla());
+        kentta.pause();
+        assertFalse(kentta.onPaalla());
+    }
+        
     
 }
