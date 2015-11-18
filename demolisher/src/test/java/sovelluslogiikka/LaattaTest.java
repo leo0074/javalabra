@@ -21,12 +21,21 @@ public class LaattaTest {
     }
     
     @Test
+    public void testaaLaatandeaktivoituminen(){
+        Pallo pallo = new Pallo(140, 100, 4, -4);
+        Laatta laatta = new Laatta(100, 100, Color.BLACK);
+        laatta.tormaa(pallo);
+        assertFalse(laatta.aktiivinen());
+    }
+    
+    @Test
     public void testPallontormaaminenYlhaalta(){
         Pallo pallo = new Pallo(140, 100, 4, -4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);
         
+        laatta = new Laatta(100, 100, Color.BLACK);
         pallo = new Pallo(140, 95, 4, -4);
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == 4);        
@@ -41,6 +50,7 @@ public class LaattaTest {
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
         
+        laatta = new Laatta(100, 100, Color.BLACK);
         pallo = new Pallo(120, 120, 4, 4);
         laatta.tormaa(pallo);
         System.out.println(pallo.getDx());
@@ -55,6 +65,7 @@ public class LaattaTest {
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);
         
+        laatta = new Laatta(100, 100, Color.BLACK);
         pallo = new Pallo(95, 115, 4, -4);
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);        
@@ -68,6 +79,7 @@ public class LaattaTest {
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
         
+        laatta = new Laatta(100, 100, Color.BLACK);
         pallo = new Pallo(150, 110, -4, -4);
         laatta.tormaa(pallo);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);        

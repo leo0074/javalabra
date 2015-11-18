@@ -24,8 +24,12 @@ public class Paivittaja extends TimerTask{
      */ 
     @Override
     public void run() {
-        pallo.liiku();
+        if(!kentta.onPaalla()){
+            return;
+        }
+        
         lauta.siirry();
+        pallo.liiku();
         for(Blockeri blockeri: blockerit)
             blockeri.tormaa(pallo);
         lauta.tormaa(pallo);

@@ -20,19 +20,18 @@ public class Kentta extends JPanel{
     
     public Kentta(){
         blockerit = Kentta1.luoBlockerit();
-        pallo = new Pallo(250, 500, 0, -4);
+        pallo = new Pallo(250, 500, 1, -4);
         lauta = new Lauta(215);
         paivittaja = new Paivittaja(this);
-        timer = new Timer();
         paalla = false;
+        timer = new Timer();
+        timer.scheduleAtFixedRate(paivittaja, 100, 12);
     }
     
     /**
      * Metodi aloittaa pelin/jatkaa peliä
      */
     public void start(){     
-        if(!paalla)
-            timer.scheduleAtFixedRate(paivittaja, 100, 12);
         paalla = true;
     }
     
