@@ -23,3 +23,6 @@ Päivittäjä-luokan alustus. Lisää testejä. 1h
 
 16.11.2015
 Käyttätoimintojen luonti, Lisää luokkia ja testejä. 3h
+
+18.11.2015
+Start ja pause. Lisäksi käyttöliittymän hiomista ja esimerkkikentän päivittäminen. Havaittu bugi, jossa kaksi laattaa voi tuhota kerralla ja pallo jatkaa matkaa. Pyrin korjaamaan sen myöhemmin
