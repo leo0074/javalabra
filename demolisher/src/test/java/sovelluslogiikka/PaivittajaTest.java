@@ -1,6 +1,7 @@
 
 package sovelluslogiikka;
 
+import kayttoliittyma.Kentta;
 import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 

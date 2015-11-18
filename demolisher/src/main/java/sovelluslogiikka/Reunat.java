@@ -18,8 +18,7 @@ public class Reunat implements Blockeri{
     * kääntämään kulkusuuntaansa, jos se osuu reunalle.
     *
     *@param pallo tutkittava pallo
-    */
-    
+    */   
     @Override
     public void tormaa(Pallo pallo) {
         if(pallo.getX() <= 5 || pallo.getX() >= 495)

@@ -1,6 +1,7 @@
 
 package sovelluslogiikka;
 
+import kayttoliittyma.Kentta;
 import java.util.ArrayList;
 import java.util.TimerTask;
 
@@ -17,6 +18,10 @@ public class Paivittaja extends TimerTask{
         this.kentta = kentta;
     }
 
+    /**
+     * Metodi käskee palloa liikkumaan, laudan siirtymään, tarkastuttaa pallon
+     * osumisen esteisiin ja uudelleenpiirrättää kentän.
+     */ 
     @Override
     public void run() {
         pallo.liiku();

@@ -53,11 +53,19 @@ public class Pallo {
         }
     }
     
+    
+    /**
+     * Metodi liikuttaa palloa yhden 'askeleen' pallon kulkusuuntaan
+     */
     public void liiku(){
         x = x + dx;
         y = y + dy;
     }
     
+    /**
+     * Metodi piirtää pallon
+     * @param g Graphics
+     */
     public void paint(Graphics g){
         g.setColor(Color.black);
         g.fillOval(x-5, y-5, 10, 10);

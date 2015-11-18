@@ -1,6 +1,7 @@
 
-package sovelluslogiikka;
+package kayttoliittyma;
 
+import kayttoliittyma.Kentta;
 import graphicsMock.GraphicsMock;
 import org.junit.Test;
 import static org.junit.Assert.*;

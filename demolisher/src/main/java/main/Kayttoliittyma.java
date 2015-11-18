@@ -1,11 +1,12 @@
-package kayttoliittyma;
+package main;
 
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-import sovelluslogiikka.Kentta;
+import kayttoliittyma.Kentta;
+import kayttoliittyma.Nappaimisto;
 
 public class Kayttoliittyma implements Runnable{
 

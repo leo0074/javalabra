@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.awt.event.KeyEvent;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-import sovelluslogiikka.Kentta;
 
 
 public class NappaimistoTest {

@@ -17,17 +17,30 @@ public class Lauta implements Blockeri{
         return x;
     }
     
+    /**
+     * Metodi siirtää laudan samaan x-koordinaatin kohtaan hiiren kanssa
+     */
     public void siirry(){
         int x = haeHiirenX();
         if(x >= 45 && x  <= 455)
             this.x = x - 45;
     }
     
+    /**
+     * Metodi hakee hiiren x-koordinaatin
+     * @return Hiiren x-koordinaatti
+     */
+    
     private int haeHiirenX(){
         PointerInfo hiiri = MouseInfo.getPointerInfo();
         return (int) hiiri.getLocation().getX();
     }
     
+    /**
+    * Metodi tutkii osuuko annettu pallo tähän lautaan ja kääntää pallon
+    * suunnan, jos pallo osuu
+    * @param pallo pallo, jonka törmäämistä tähän laattaan tutkitaan
+    */    
     @Override
     public void tormaa(Pallo pallo) {
         if(pallo.getY() >= y-5 && pallo.getY() <= y){
@@ -41,6 +54,10 @@ public class Lauta implements Blockeri{
         }
     }
 
+    /**
+     * Metodi piirtää laudan
+     * @param g Graphics 
+     */  
     @Override
     public void paint(Graphics g) {
         g.setColor(Color.BLACK);

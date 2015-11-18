@@ -84,6 +84,6 @@ public class LaattaTest {
         assertTrue(koord.get(1) == 245);
         assertTrue(koord.get(2) == 400);
         assertTrue(koord.get(3) == 265);
-        assertTrue(g.getColor() == Color.BLUE);
+        assertTrue(g.getColor() == Color.BLACK);
     }
 }

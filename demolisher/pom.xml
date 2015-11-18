@@ -41,10 +41,11 @@
             <configuration>
                 <targetClasses>
                     <param>sovelluslogiikka*</param>
-                    
+                    <param>kayttoliittyma*</param>
                 </targetClasses>
                 <targetTests>
                     <param>sovelluslogiikka*</param>
+                    <param>kayttoliittyma*</param>
                 </targetTests>
             </configuration>
         </plugin>

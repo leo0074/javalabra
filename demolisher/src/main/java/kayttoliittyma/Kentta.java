@@ -1,10 +1,14 @@
-package sovelluslogiikka;
+package kayttoliittyma;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import java.util.Timer;
 import kentat.Kentta1;
+import sovelluslogiikka.Blockeri;
+import sovelluslogiikka.Lauta;
+import sovelluslogiikka.Paivittaja;
+import sovelluslogiikka.Pallo;
 
 public class Kentta extends JPanel{
     private ArrayList<Blockeri> blockerit;
@@ -23,20 +27,30 @@ public class Kentta extends JPanel{
         paalla = false;
     }
     
+    /**
+     * Metodi aloittaa pelin/jatkaa peliä
+     */
     public void start(){     
         if(!paalla)
             timer.scheduleAtFixedRate(paivittaja, 100, 12);
         paalla = true;
     }
     
+    /**
+     * Metodi keskeyttää pelin (KESKEN!)
+     */
     public void pause(){
         paalla = false;
     }
-    
+
+    /**
+     * Metodi kertoo, onko peli käynnissä
+     * @return Boolean, joka kertoo, että onko peli käynnissä.
+     */
     public boolean onPaalla(){
         return paalla;
     }
-    
+      
     public ArrayList<Blockeri> getBlockerit(){
         return blockerit;
     }

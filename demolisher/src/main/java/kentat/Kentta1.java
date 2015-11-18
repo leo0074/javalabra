@@ -10,6 +10,7 @@ public class Kentta1 {
         ArrayList<Blockeri> blockerit = new ArrayList<>();
         blockerit.add(new Reunat());
         blockerit.add(new Laatta(0, 0, Color.BLUE));
+        blockerit.add(new Laatta(50, 0, Color.BLUE));
         
         return blockerit;
     }

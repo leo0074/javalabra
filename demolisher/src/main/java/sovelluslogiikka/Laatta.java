@@ -15,6 +15,12 @@ public class Laatta implements Blockeri{
         this.vari = vari;
     }
     
+    
+    /**
+    * Metodi tutkii osuuko annettu pallo tähän laattaan ja kääntää pallon
+    * suunnan, jos pallo osuu
+    * @param pallo pallo, jonka törmäämistä tähän laattaan tutkitaan
+    */
     @Override
     public void tormaa(Pallo pallo) {
         if(pallo.getX() >= x && pallo.getX() <= x+50){
@@ -32,10 +38,16 @@ public class Laatta implements Blockeri{
         }        
     }
 
+    /**
+     * Metodi piirtää laatan
+     * @param g Graphics
+     */
     @Override
     public void paint(Graphics g) {
         g.setColor(vari);
-        g.fillRect(x, y, 50, 20);        
+        g.fillRect(x, y, 50, 20);
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, 50, 20);
     }
 
 }
