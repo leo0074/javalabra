@@ -36,7 +36,7 @@ public class Kentta extends JPanel{
     }
     
     /**
-     * Metodi keskeyttää pelin (KESKEN!)
+     * Metodi keskeyttää pelin
      */
     public void pause(){
         paalla = false;
