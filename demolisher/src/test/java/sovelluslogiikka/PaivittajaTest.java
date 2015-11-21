@@ -7,12 +7,12 @@ import org.junit.Test;
 
 public class PaivittajaTest {
 
-    public PaivittajaTest(){
+    public PaivittajaTest() {
         
     }
 
     @Test
-    public void testaaRunjaPause(){
+    public void testaaRunjaPause() {
         Kentta kentta = new Kentta(1);
         Paivittaja paivittaja = new Paivittaja(kentta);
         int pallonY1 = kentta.getPallo().getY();

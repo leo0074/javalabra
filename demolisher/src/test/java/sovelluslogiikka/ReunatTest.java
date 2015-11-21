@@ -31,7 +31,7 @@ public class ReunatTest {
     }
 
     @Test
-    public void testaaPallonTormaaminen(){
+    public void testaaPallonTormaaminen() {
        Pallo pallo = new Pallo(100, 150, 4, 4);
        Reunat reuna = new Reunat();
        reuna.tormaa(pallo);

@@ -8,7 +8,7 @@ import javax.swing.WindowConstants;
 import kayttoliittyma.Kentta;
 import kayttoliittyma.Nappaimisto;
 
-public class Kayttoliittyma implements Runnable{
+public class Kayttoliittyma implements Runnable {
 
     @Override
     public void run() {

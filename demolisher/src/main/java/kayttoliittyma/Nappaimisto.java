@@ -3,10 +3,14 @@ package kayttoliittyma;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Nappaimisto implements KeyListener{
+/**
+ * Luokka kuuntelee näppäimistöä, jonka avulla pelin voi aloittaa, pysäyttää tai
+ * jatkaa.
+ */
+public class Nappaimisto implements KeyListener {
     
     private Kentta kentta;
-    public Nappaimisto(Kentta kentta){
+    public Nappaimisto(Kentta kentta) {
         this.kentta = kentta;
     }
     
@@ -17,11 +21,11 @@ public class Nappaimisto implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyChar() == 's'){
+        if (e.getKeyChar() == 's') {
             kentta.start();
         }
         
-        if(e.getKeyChar() == 'p'){
+        if (e.getKeyChar() == 'p') {
             kentta.pause();
         }
         

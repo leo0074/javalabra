@@ -15,7 +15,7 @@ import java.awt.image.ImageObserver;
 import java.text.AttributedCharacterIterator;
 import java.util.ArrayList;
 
-public class GraphicsMock extends Graphics{
+public class GraphicsMock extends Graphics {
     private ArrayList<Integer> koordinaatit;
     private Color vari;
     private int piirrot;
@@ -25,15 +25,15 @@ public class GraphicsMock extends Graphics{
         piirrot = 0;
     }
     
-    public String getViesti(){
+    public String getViesti() {
         return viesti;
     }
     
-    public int getPiirrot(){
+    public int getPiirrot() {
         return piirrot;
     }
     
-    public ArrayList<Integer> getKoordinaatit(){
+    public ArrayList<Integer> getKoordinaatit() {
         return koordinaatit;
     }
     

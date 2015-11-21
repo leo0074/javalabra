@@ -7,7 +7,10 @@ import java.util.Timer;
 import kentat.*;
 import sovelluslogiikka.*;
 
-public class Kentta extends JPanel{
+/**
+ * Luokka kokoaa pelissä olevat objektit ja tietää onko peli käynnissä vai ei.
+ */
+public class Kentta extends JPanel {
     private ArrayList<Blockeri> blockerit;
     private Pallo pallo;
     private Lauta lauta;
@@ -16,10 +19,16 @@ public class Kentta extends JPanel{
     private boolean paalla;
     private Viesti viesti;
     
-    public Kentta(int kenttaNro){
-        switch(kenttaNro){
-            case 0: blockerit = TestiKentta.luoBlockerit(); break;
-            case 1: blockerit = Kentta1.luoBlockerit(); break;
+    public Kentta(int kenttaNro) {
+        switch(kenttaNro) {
+            case 0: {
+                blockerit = TestiKentta.luoBlockerit(); 
+                break;
+            }
+            case 1: {
+                blockerit = Kentta1.luoBlockerit(); 
+                break;
+            }
         }
           
         pallo = new Pallo(250, 500, 1, -4);
@@ -34,7 +43,7 @@ public class Kentta extends JPanel{
     /**
      * Metodi aloittaa pelin/jatkaa peliä
      */
-    public void start(){     
+    public void start() {     
         paalla = true;
         viesti.paivitaViesti(); 
     }
@@ -42,7 +51,7 @@ public class Kentta extends JPanel{
     /**
      * Metodi keskeyttää pelin
      */
-    public void pause(){
+    public void pause() {
         paalla = false;
         viesti.paivitaViesti();
         this.repaint();
@@ -52,30 +61,30 @@ public class Kentta extends JPanel{
      * Metodi kertoo, onko peli käynnissä
      * @return Boolean, joka kertoo, että onko peli käynnissä.
      */
-    public boolean onPaalla(){
+    public boolean onPaalla() {
         return paalla;
     }
       
-    public ArrayList<Blockeri> getBlockerit(){
+    public ArrayList<Blockeri> getBlockerit() {
         return blockerit;
     }
     
-    public Lauta getLauta(){
+    public Lauta getLauta() {
         return lauta;
     }
     
-    public Pallo getPallo(){
+    public Pallo getPallo() {
         return pallo;
     }
     
-    public Viesti getViesti(){
+    public Viesti getViesti() {
         return this.viesti;
     }
     
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for(Blockeri blockeri : blockerit){
+        for (Blockeri blockeri : blockerit) {
             blockeri.paint(g);
         }
         pallo.paint(g);

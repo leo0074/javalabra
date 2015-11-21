@@ -32,7 +32,7 @@ public class ViestiTest {
     }
     
     @Test
-    public void testaaPelinAikainenViesti(){
+    public void testaaPelinAikainenViesti() {
         Kentta kentta = new Kentta(0);
         Viesti viesti = kentta.getViesti();
         GraphicsMock g = new GraphicsMock();
@@ -43,7 +43,7 @@ public class ViestiTest {
     }
     
     @Test
-    public void testaaPauseViesti(){
+    public void testaaPauseViesti() {
         Kentta kentta = new Kentta(0);
         Viesti viesti = kentta.getViesti();
         GraphicsMock g = new GraphicsMock();

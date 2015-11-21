@@ -11,7 +11,7 @@ public class NappaimistoTest {
     }
     
    @Test
-   public void testaaStratti(){
+   public void testaaStratti() {
         Kentta kentta = new Kentta(0);
         Nappaimisto nappaimisto = new Nappaimisto(kentta);
         KeyEvent e = new KeyEvent(new Component(){}, 0, 0, 0, 83, 's', 0);

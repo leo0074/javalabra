@@ -12,7 +12,7 @@ public class LautaTest {
 
 
     @Test
-    public void testaaLaudanPiirtyminen(){
+    public void testaaLaudanPiirtyminen() {
         Lauta lauta = new Lauta(250);
         GraphicsMock g = new GraphicsMock();
         lauta.paint(g);
@@ -25,7 +25,7 @@ public class LautaTest {
         
     }
     @Test
-    public void testaaTormays(){
+    public void testaaTormays() {
         Pallo pallo = new Pallo(250, 545, 4, 4);
         Lauta lauta = new Lauta(250);
         lauta.tormaa(pallo);
@@ -66,7 +66,7 @@ public class LautaTest {
         assertTrue(pallo.getDx() == 4);               
     }
     @Test
-    public void testaaGetteri(){
+    public void testaaGetteri() {
         Lauta lauta = new Lauta(250);
         assertTrue(lauta.getX() == 250);
     }

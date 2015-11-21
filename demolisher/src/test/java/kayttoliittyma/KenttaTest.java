@@ -11,13 +11,13 @@ public class KenttaTest {
     }
     
     @Test
-    public void testaaLuonti(){
+    public void testaaLuonti() {
         Kentta kentta = new Kentta(0);
         assertTrue(kentta.getBlockerit() != null && kentta.getPallo() != null);       
     }
     
     @Test
-    public void testaaPiirto(){
+    public void testaaPiirto() {
         Kentta kentta = new Kentta(0);
         GraphicsMock g = new GraphicsMock();
         kentta.paintComponent(g);
@@ -27,7 +27,7 @@ public class KenttaTest {
     }
     
     @Test
-    public void testaaStartJaPause(){
+    public void testaaStartJaPause() {
         Kentta kentta = new Kentta(0);
         kentta.start();
         assertTrue(kentta.onPaalla());

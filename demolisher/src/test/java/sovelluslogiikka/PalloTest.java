@@ -33,7 +33,7 @@ public class PalloTest {
     }
 
     @Test
-    public void testaaPallonKaantyminen(){
+    public void testaaPallonKaantyminen() {
         Pallo pallo = new Pallo(100, 100, 4, 4);
         pallo.kaanny(true);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
@@ -43,14 +43,14 @@ public class PalloTest {
     }
     
     @Test
-    public void testaaPallonKierroksenPaivitys(){
+    public void testaaPallonKierroksenPaivitys() {
         Pallo pallo = new Pallo(100, 100, 4, 4);
         pallo.seuraavaKierros();
         assertTrue(pallo.getKierros() == 1);
     }
     
     @Test
-    public void testaaPallonPiirtyminen(){
+    public void testaaPallonPiirtyminen() {
         Pallo pallo = new Pallo(250, 145, 1, 4);
         GraphicsMock g = new GraphicsMock();
         pallo.paint(g);
@@ -63,7 +63,7 @@ public class PalloTest {
     }
     
     @Test
-    public void testaaPallonLiikkuminen(){
+    public void testaaPallonLiikkuminen() {
         Pallo pallo = new Pallo(250, 145, 1, 4);
         pallo.liiku();
         assertTrue(pallo.getX() == 251);

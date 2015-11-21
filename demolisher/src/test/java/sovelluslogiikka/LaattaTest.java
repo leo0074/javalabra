@@ -13,7 +13,7 @@ public class LaattaTest {
 
 
     @Test
-    public void testaaEtteiPalloKaannyTurhaan(){
+    public void testaaEtteiPalloKaannyTurhaan() {
         Pallo pallo = new Pallo(250, 200, 4, 4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -21,7 +21,7 @@ public class LaattaTest {
     }
     
     @Test
-    public void testaaLaatandeaktivoituminen(){
+    public void testaaLaatandeaktivoituminen() {
         Pallo pallo = new Pallo(140, 100, 4, -4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -29,7 +29,7 @@ public class LaattaTest {
     }
     
     @Test
-    public void testPallontormaaminenYlhaalta(){
+    public void testPallontormaaminenYlhaalta() {
         Pallo pallo = new Pallo(140, 100, 4, -4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -44,7 +44,7 @@ public class LaattaTest {
     }
     
     @Test
-    public void testPallontormaaminenAlhaalta(){
+    public void testPallontormaaminenAlhaalta() {
         Pallo pallo = new Pallo(125, 125, 4, 4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -59,7 +59,7 @@ public class LaattaTest {
     }    
     
     @Test
-    public void testPallontormaaminenVasemmalta(){
+    public void testPallontormaaminenVasemmalta() {
         Pallo pallo = new Pallo(100, 115, 4, -4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -73,7 +73,7 @@ public class LaattaTest {
     }        
 
     @Test
-    public void testPallontormaaminenOikealta(){
+    public void testPallontormaaminenOikealta() {
         Pallo pallo = new Pallo(155, 110, -4, -4);
         Laatta laatta = new Laatta(100, 100, Color.BLACK);
         laatta.tormaa(pallo);
@@ -87,7 +87,7 @@ public class LaattaTest {
     }      
     
     @Test
-    public void testaaLaatanPiirtyminen(){
+    public void testaaLaatanPiirtyminen() {
         Laatta laatta = new Laatta(350, 245, Color.BLUE);
         GraphicsMock g = new GraphicsMock();
         laatta.paint(g);

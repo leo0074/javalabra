@@ -4,9 +4,12 @@ import java.awt.Color;
 import java.util.ArrayList;
 import sovelluslogiikka.*;
 
-public class TestiKentta{
+/**
+ * Staattinen kentänluoja testejä varten 
+ */
+public class TestiKentta {
     
-    public static ArrayList<Blockeri> luoBlockerit(){
+    public static ArrayList<Blockeri> luoBlockerit() {
         ArrayList<Blockeri> blockerit = new ArrayList<>();
         blockerit.add(new Reunat());
         blockerit.add(new Laatta(0, 0, Color.BLUE)); 
