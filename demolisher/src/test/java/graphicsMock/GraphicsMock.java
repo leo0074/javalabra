@@ -19,9 +19,14 @@ public class GraphicsMock extends Graphics{
     private ArrayList<Integer> koordinaatit;
     private Color vari;
     private int piirrot;
+    private String viesti;
     public GraphicsMock(){
         this.koordinaatit = new ArrayList<>();
         piirrot = 0;
+    }
+    
+    public String getViesti(){
+        return viesti;
     }
     
     public int getPiirrot(){
@@ -177,7 +182,8 @@ public class GraphicsMock extends Graphics{
 
     @Override
     public void drawString(String string, int i, int i1) {
-    
+        this.viesti = string;
+        piirrot++;
     }
 
     @Override

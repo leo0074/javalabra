@@ -39,7 +39,7 @@ public class Lauta implements Blockeri{
     /**
     * Metodi tutkii osuuko annettu pallo tähän lautaan ja kääntää pallon
     * suunnan, jos pallo osuu
-    * @param pallo pallo, jonka törmäämistä tähän laattaan tutkitaan
+    * @param pallo pallo, jonka törmäämistä tähän lautaan tutkitaan
     */    
     @Override
     public void tormaa(Pallo pallo) {

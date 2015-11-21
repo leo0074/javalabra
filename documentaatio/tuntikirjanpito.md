@@ -26,3 +26,6 @@ Käyttätoimintojen luonti, Lisää luokkia ja testejä. 3h
 
 18.11.2015
 Start ja pause. Lisäksi käyttöliittymän hiomista ja esimerkkikentän päivittäminen. Havaittu bugi, jossa kaksi laattaa voi tuhota kerralla ja pallo jatkaa matkaa. Pyrin korjaamaan sen myöhemmin. 3h
+
+21.11.2015
+Start ja pause viesti näkyville. Korjattu bugi, missä kahden laatan tuhottuaan pallo jatkaa kulkusuuntaansa eikä käänny.

@@ -4,11 +4,8 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import java.util.Timer;
-import kentat.Kentta1;
-import sovelluslogiikka.Blockeri;
-import sovelluslogiikka.Lauta;
-import sovelluslogiikka.Paivittaja;
-import sovelluslogiikka.Pallo;
+import kentat.*;
+import sovelluslogiikka.*;
 
 public class Kentta extends JPanel{
     private ArrayList<Blockeri> blockerit;
@@ -17,13 +14,19 @@ public class Kentta extends JPanel{
     private Paivittaja paivittaja;
     private Timer timer;
     private boolean paalla;
+    private Viesti viesti;
     
-    public Kentta(){
-        blockerit = Kentta1.luoBlockerit();
+    public Kentta(int kenttaNro){
+        switch(kenttaNro){
+            case 0: blockerit = TestiKentta.luoBlockerit(); break;
+            case 1: blockerit = Kentta1.luoBlockerit(); break;
+        }
+          
         pallo = new Pallo(250, 500, 1, -4);
         lauta = new Lauta(215);
         paivittaja = new Paivittaja(this);
         paalla = false;
+        viesti = new Viesti(this);
         timer = new Timer();
         timer.scheduleAtFixedRate(paivittaja, 100, 12);
     }
@@ -33,6 +36,7 @@ public class Kentta extends JPanel{
      */
     public void start(){     
         paalla = true;
+        viesti.paivitaViesti(); 
     }
     
     /**
@@ -40,6 +44,8 @@ public class Kentta extends JPanel{
      */
     public void pause(){
         paalla = false;
+        viesti.paivitaViesti();
+        this.repaint();
     }
 
     /**
@@ -62,6 +68,10 @@ public class Kentta extends JPanel{
         return pallo;
     }
     
+    public Viesti getViesti(){
+        return this.viesti;
+    }
+    
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -70,6 +80,7 @@ public class Kentta extends JPanel{
         }
         pallo.paint(g);
         lauta.paint(g);
+        viesti.paint(g);
     }
     
 }

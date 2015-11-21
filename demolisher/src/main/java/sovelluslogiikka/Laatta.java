@@ -5,9 +5,9 @@ import java.awt.Graphics;
 
 public class Laatta implements Blockeri{
 
-    private int x; //koordinaatit osoittavan laatan oikeaan yläkulmaan
-    private int y; //laatan koko on 50x20
-    private Color vari; //laatan väri
+    private final int x; //koordinaatit osoittavan laatan oikeaan yläkulmaan
+    private final int y; //laatan koko on 50x20
+    private final Color vari; //laatan väri
     private boolean aktiivinen;
     
     public Laatta(int x, int y, Color vari){

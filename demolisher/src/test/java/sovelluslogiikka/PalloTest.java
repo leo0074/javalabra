@@ -37,8 +37,16 @@ public class PalloTest {
         Pallo pallo = new Pallo(100, 100, 4, 4);
         pallo.kaanny(true);
         assertTrue(pallo.getDx() == 4 && pallo.getDy() == -4);
+        pallo = new Pallo(100, 100, 4, 4);
         pallo.kaanny(false);
-        assertTrue(pallo.getDx() == -4 && pallo.getDy() == -4);
+        assertTrue(pallo.getDx() == -4 && pallo.getDy() == 4);
+    }
+    
+    @Test
+    public void testaaPallonKierroksenPaivitys(){
+        Pallo pallo = new Pallo(100, 100, 4, 4);
+        pallo.seuraavaKierros();
+        assertTrue(pallo.getKierros() == 1);
     }
     
     @Test

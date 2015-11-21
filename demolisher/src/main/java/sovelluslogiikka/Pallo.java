@@ -8,12 +8,16 @@ public class Pallo {
     private int y; //pallon halkaisija on tässä pelissä 10 pikseliä
     private int dx; //pallon x-suunnan liikenopeus
     private int dy; //pallon y-suunnan liikenopeus
+    private int kierros;
+    private int kaantynytViimeksi;
     
     public Pallo(int x, int y, int dx, int dy){
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
+        this.kierros = 0;
+        this.kaantynytViimeksi = -1;
     }
     
     public int getX(){
@@ -40,19 +44,33 @@ public class Pallo {
         this.dy = dy;
     }    
     
+    public void seuraavaKierros(){
+        kierros++;
+    }
+    
+    public boolean tarkistaPelinLoppuminen(){
+        return x >= 700;
+    }
+    
     /**
     * Metodi kääntää pallon suuntaan sen osuessa esteeseen
     * kuten pelikentän reunalle tai laattaan
     *@param   vaakatormays kertoo onko törmäys tapahtunut vaakasuoraan esteeseen
     */    
     public void kaanny(boolean vaakatormays){
-        if(vaakatormays){
-            dy = -dy;
-        }else{
-            dx = -dx;
+        if(kierros != kaantynytViimeksi){ 
+        kierros = kaantynytViimeksi;
+            if(vaakatormays){
+                dy = -dy;
+            }else{
+                dx = -dx;
+            }
         }
     }
     
+    public int getKierros(){
+        return this.kierros;
+    }
     
     /**
      * Metodi liikuttaa palloa yhden 'askeleen' pallon kulkusuuntaan

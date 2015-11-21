@@ -16,7 +16,7 @@ public class Kayttoliittyma implements Runnable{
         frame.setPreferredSize(new Dimension(510, 700));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Container container = frame.getContentPane();
-        Kentta kentta = new Kentta();
+        Kentta kentta = new Kentta(1);
         container.add(kentta);
         frame.addKeyListener(new Nappaimisto(kentta));
         frame.setBackground(Color.WHITE);
