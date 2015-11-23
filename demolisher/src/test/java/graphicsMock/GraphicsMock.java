@@ -23,6 +23,8 @@ public class GraphicsMock extends Graphics {
     public GraphicsMock(){
         this.koordinaatit = new ArrayList<>();
         piirrot = 0;
+        vari = null;
+        viesti = null;
     }
     
     public String getViesti() {

@@ -66,7 +66,7 @@ public class Pallo {
     * @return boolean, joka on tosi kun pallo on ylittänyt kentän rajan.
     */
     public boolean tarkistaPelinLoppuminen() {
-        return x >= 700;
+        return y >= 700;
     }
     
     /**

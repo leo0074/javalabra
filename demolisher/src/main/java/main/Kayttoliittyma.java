@@ -23,5 +23,4 @@ public class Kayttoliittyma implements Runnable {
         frame.pack();
         frame.setVisible(true); 
     }
-
 }

@@ -4,17 +4,17 @@ import java.awt.Color;
 import java.util.ArrayList;
 import sovelluslogiikka.*;
 
-/**
- * Staattinen kentänluoja testejä varten 
- */
-public class TestiKentta {
-    
+
+public class Kentta2 {
     public static ArrayList<Blockeri> luoBlockerit(PisteLaskuri laskuri) {
         ArrayList<Blockeri> blockerit = new ArrayList<>();
         blockerit.add(new Reunat());
-        blockerit.add(new Laatta(0, 0, Color.BLUE, laskuri)); 
-        blockerit.add(new Laatta(50, 0, Color.BLUE, laskuri)); 
-        blockerit.add(new Laatta(100, 0, Color.BLUE, laskuri)); 
+        for (int x = 0; x <= 450; x = x + 50) {
+            blockerit.add(new Laatta(x, 0, Color.RED, laskuri)); 
+        }
+        for (int x = 0; x <= 450; x = x + 50) {
+            blockerit.add(new Laatta(x, 20, Color.YELLOW, laskuri)); 
+        }
         return blockerit;
     }
     

@@ -29,3 +29,6 @@ Start ja pause. Lisäksi käyttöliittymän hiomista ja esimerkkikentän päivit
 
 21.11.2015
 Start ja pause viesti näkyville. Korjattu bugi, missä kahden laatan tuhottuaan pallo jatkaa kulkusuuntaansa eikä käänny. Javadockeja päivitetty ja koodia yleisesti siistitty 3,5h
+
+23.11.2015
+Pistelaskuri lisätty. Peli tunnistaa milloin pallo menee kentän alaosasta yli. Aloitettu pelin lopettajan/seuraavaan tasoon siirtymistä. 4h

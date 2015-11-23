@@ -23,7 +23,7 @@ public class KenttaTest {
         kentta.paintComponent(g);
         assertTrue(!g.getKoordinaatit().isEmpty());
         assertTrue(g.getColor()!=null);
-        assertTrue(g.getPiirrot() == 7);
+        assertTrue(g.getPiirrot() == 8);
     }
     
     @Test
@@ -34,6 +34,16 @@ public class KenttaTest {
         kentta.pause();
         assertFalse(kentta.onPaalla());
     }
-        
+     
+    @Test
+    public void testaaPelinLopetus() {
+        Kentta kentta = new Kentta(0);
+        kentta.start();
+        kentta.lopetaPeli();
+        assertTrue(kentta.getPeliOhi());
+        assertTrue(!kentta.onPaalla());
+        assertTrue(kentta.getViesti().getViesti().equals("Game over!"));            
+    }
+    
     
 }

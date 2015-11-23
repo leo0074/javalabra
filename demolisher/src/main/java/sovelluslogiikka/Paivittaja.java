@@ -1,4 +1,3 @@
-
 package sovelluslogiikka;
 
 import kayttoliittyma.Kentta;
@@ -22,21 +21,46 @@ public class Paivittaja extends TimerTask {
         this.kentta = kentta;
     }
 
+
+    
+    
+    public void poistaDeaktiivisetLaatat(){
+        ArrayList<Blockeri> poistot = new ArrayList<>();
+        for(Blockeri blockeri:blockerit){
+            if(blockeri.getClass().equals(Laatta.class)){
+                Laatta laatta = (Laatta) blockeri;
+                if(!laatta.aktiivinen()){
+                    poistot.add(blockeri);
+                }
+            }
+            
+        }
+        for(Blockeri blockeri : poistot){
+            blockerit.remove(blockeri);
+        }
+        if(blockerit.size() == 1){
+            kentta.kaikkiLaatatTuhottu();
+        }
+    }
+    
     /**
      * Metodi käskee palloa liikkumaan, laudan siirtymään, tarkastuttaa pallon
      * osumisen esteisiin ja uudelleenpiirrättää kentän.
-     */ 
+     */     
     @Override
     public void run() {
-        pallo.seuraavaKierros();
-        if (!kentta.onPaalla()) {
-            return;
-        }      
-        lauta.siirry();
-        pallo.liiku();
-        for (Blockeri blockeri: blockerit)
-            blockeri.tormaa(pallo);
-        lauta.tormaa(pallo);
-        kentta.repaint();
+        this.poistaDeaktiivisetLaatat();
+        if (kentta.onPaalla()) {
+            pallo.seuraavaKierros();
+            lauta.siirry();
+            pallo.liiku();
+            for (Blockeri blockeri: blockerit)
+                blockeri.tormaa(pallo);
+            lauta.tormaa(pallo);
+            kentta.repaint();    
+        } 
+        if(pallo.tarkistaPelinLoppuminen()){
+            kentta.lopetaPeli();
+        }        
     }
 }

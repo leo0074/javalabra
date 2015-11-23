@@ -39,7 +39,7 @@ public class ViestiTest {
         kentta.start();
         viesti.paint(g);
         System.out.println(g.getViesti());
-        assertTrue(g.getViesti().equals("Tarvittaeasse pysäytä peli painamalla p"));       
+        assertTrue(g.getViesti().equals("Tarvittaeassa pysäytä peli painamalla p"));       
     }
     
     @Test

@@ -14,12 +14,16 @@ public class Viesti {
         this.viesti = "Aloita peli painamalla s";
     }
     
+    public String getViesti(){
+        return this.viesti;
+    }    
+    
     /**
      * Metodi tarkistaa onko peli pysyäytetty ja päivittää viestin sen mukaisesti
      */
     public void paivitaViesti() {
         if (kentta.onPaalla()) {
-            viesti = "Tarvittaeasse pysäytä peli painamalla p";
+            viesti = "Tarvittaeassa pysäytä peli painamalla p";
         } else {
             viesti = "Jatka peliä painamalla s";
         }
@@ -27,9 +31,17 @@ public class Viesti {
     }
     
     /**
+     * Metodi asettaa viestin 'Game over!' kun sitä kutsutaan (kutsutaan pelin
+     * loputtua)
+     */
+    public void lopetaPeli() {
+        viesti = "Game over!";
+    }
+    
+    /**
     * Metodi piirtää viestin kentälle.
     */
     public void paint(Graphics g) {
-        g.drawString(viesti, 180, 600);
+        g.drawString(viesti, 100, 600);
     }    
 }
