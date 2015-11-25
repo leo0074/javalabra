@@ -42,8 +42,26 @@ public class KenttaTest {
         kentta.lopetaPeli();
         assertTrue(kentta.getPeliOhi());
         assertTrue(!kentta.onPaalla());
-        assertTrue(kentta.getViesti().getViesti().equals("Game over!"));            
+        assertTrue(kentta.getViesti().getViesti().equals("Game over! Paina r aloittaaksesi uuden pelin"));            
     }
     
+    @Test
+    public void testaaKentanLapaisy(){
+       Kentta kentta = new Kentta(0);
+       kentta.start();
+       kentta.kaikkiLaatatTuhottu();
+       assertFalse(kentta.onPaalla());
+       assertTrue(kentta.kenttaVoitettu());
+       assertEquals(kentta.getViesti().getViesti(), "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan kenttään");     
+    }
+    
+    @Test
+    public void testaaKenttaNumero(){
+       Kentta kentta = new Kentta(0);
+       assertEquals(kentta.getKenttaNro(), 0);
+       kentta = new Kentta(1);
+       assertEquals(kentta.getKenttaNro(), 1);
+       
+    }
     
 }

@@ -35,8 +35,16 @@ public class Viesti {
      * loputtua)
      */
     public void lopetaPeli() {
-        viesti = "Game over!";
+        viesti = "Game over! Paina r aloittaaksesi uuden pelin";
     }
+    
+    /**
+     * Metodi asettaa viestin kenttä läpäisty kun laatat on tuhottu
+     */
+    public void kenttaLapi(){
+        viesti = "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan kenttään";
+    }
+        
     
     /**
     * Metodi piirtää viestin kentälle.

@@ -15,16 +15,28 @@ public class Paivittaja extends TimerTask {
     private Kentta kentta;
     
     public Paivittaja(Kentta kentta) {
+        setKentta(kentta);
+    }
+
+    public void setKentta(Kentta kentta) {
         this.blockerit = kentta.getBlockerit();
         this.lauta = kentta.getLauta();
         this.pallo = kentta.getPallo();
-        this.kentta = kentta;
+        this.kentta = kentta;        
     }
-
-
     
+    /**
+     * Setterimetodi testejä varten
+     * @param blockerit lista blockereita
+     */
+    public void setBlockerit(ArrayList<Blockeri> blockerit){
+        this.blockerit = blockerit;
+    }
     
-    public void poistaDeaktiivisetLaatat(){
+    /**
+     * Poistaa tuhotut laatat listasta.
+     */
+    public void poistaDeaktiivisetLaatat() {
         ArrayList<Blockeri> poistot = new ArrayList<>();
         for(Blockeri blockeri:blockerit){
             if(blockeri.getClass().equals(Laatta.class)){

@@ -18,11 +18,26 @@ public class Kentta extends JPanel {
     private Timer timer;
     private boolean paalla;
     private boolean peliOhi;
+    private boolean kenttaLapi;
     private Viesti viesti;
     private PisteLaskuri laskuri;
+    private int kenttaNro;
     
     public Kentta(int kenttaNro) {
-        laskuri = new PisteLaskuri();        
+        alusta(kenttaNro);
+    }
+    
+    
+    /**
+     * Alustaa kentän
+     * @param kenttaNro alustettavan kentän numero 
+     */
+    public void alusta(int kenttaNro){
+        this.kenttaNro = kenttaNro;
+        if(laskuri == null || peliOhi){
+            laskuri = new PisteLaskuri();
+        }
+        
         switch(kenttaNro) {
             case 0: {
                 blockerit = TestiKentta.luoBlockerit(laskuri); 
@@ -39,18 +54,29 @@ public class Kentta extends JPanel {
         }         
         pallo = new Pallo(250, 500, 1, -4);
         lauta = new Lauta(215);
-        paivittaja = new Paivittaja(this);
+        
         paalla = false;
         peliOhi = false;
+        kenttaLapi = false;
         viesti = new Viesti(this);
-        timer = new Timer();
-        timer.scheduleAtFixedRate(paivittaja, 100, 12);
+        if(paivittaja == null){
+            paivittaja = new Paivittaja(this);
+            timer = new Timer();
+            timer.scheduleAtFixedRate(paivittaja, 100, 12);  
+        }else{
+            paivittaja.setKentta(this);
+            this.repaint();
+        }   
     }
     
     public ArrayList<Blockeri> getBlockerit() {
         return blockerit;
     }
     
+    public int getKenttaNro(){
+        return this.kenttaNro;
+    }
+  
     public Lauta getLauta() {
         return lauta;
     }
@@ -66,6 +92,10 @@ public class Kentta extends JPanel {
     public boolean getPeliOhi(){
         return this.peliOhi;
     }
+    
+    public boolean kenttaVoitettu(){
+        return this.kenttaLapi;
+    }    
     
     /**
      * Metodi aloittaa pelin/jatkaa peliä
@@ -91,14 +121,20 @@ public class Kentta extends JPanel {
     public void lopetaPeli() {
         peliOhi = true;
         paalla = false;
-        viesti.lopetaPeli();
+        viesti.lopetaPeli();    
     }
     
+    
+    /**
+     * Metodi asettaa muuttujat vastaaman tilaa missä kaikki laatat ovat tuhottu   
+    **/
     public void kaikkiLaatatTuhottu() {
         paalla = false;
+        kenttaLapi = true;
+        viesti.kenttaLapi();
+        this.repaint();
     }
-    
-    
+   
     /**
      * Metodi kertoo, onko peli käynnissä
      * @return Boolean, joka kertoo, että onko peli käynnissä.

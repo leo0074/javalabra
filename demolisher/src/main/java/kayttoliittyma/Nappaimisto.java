@@ -2,15 +2,19 @@ package kayttoliittyma;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import main.Kayttoliittyma;
+import sovelluslogiikka.Blockeri;
+import sovelluslogiikka.Reunat;
 
 /**
  * Luokka kuuntelee näppäimistöä, jonka avulla pelin voi aloittaa, pysäyttää tai
  * jatkaa.
  */
 public class Nappaimisto implements KeyListener {
-    
+    private Kayttoliittyma liittyma;
     private Kentta kentta;
-    public Nappaimisto(Kentta kentta) {
+    public Nappaimisto(Kentta kentta, Kayttoliittyma liittyma) {
         this.kentta = kentta;
     }
     
@@ -27,8 +31,16 @@ public class Nappaimisto implements KeyListener {
         
         if (e.getKeyChar() == 'p') {
             kentta.pause();
+            kentta.repaint();
         }
         
+        if (e.getKeyChar() == 'r' && kentta.getPeliOhi()) {
+            kentta.alusta(1);
+        }
+        
+        if (e.getKeyChar() == 'n' && kentta.kenttaVoitettu()) {
+            kentta.alusta(2);
+        }
     }
 
     @Override

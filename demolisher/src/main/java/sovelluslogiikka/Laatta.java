@@ -37,7 +37,7 @@ public class Laatta implements Blockeri {
      * @param laatu Onko kyseessä vaaka- vai pystysuuntsinen törmäys
      * @param pallo Pallo, joka osui tähän laattaan.
      */
-    private void deaktivoi(boolean laatu, Pallo pallo){
+    public void deaktivoi(boolean laatu, Pallo pallo){
         pallo.kaanny(laatu);
         aktiivinen = false;
         laskuri.kasvataPisteita();

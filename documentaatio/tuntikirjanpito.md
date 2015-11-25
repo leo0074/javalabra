@@ -32,3 +32,9 @@ Start ja pause viesti näkyville. Korjattu bugi, missä kahden laatan tuhottuaan
 
 23.11.2015
 Pistelaskuri lisätty. Peli tunnistaa milloin pallo menee kentän alaosasta yli. Aloitettu pelin lopettajan/seuraavaan tasoon siirtymistä. 4h
+
+24.11.2015
+Kentän vaihto ja alusta aloittaminen. 3h
+
+25.11.2015
+Testien päivittämistä ja javadockeja
