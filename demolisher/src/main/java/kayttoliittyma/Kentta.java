@@ -32,9 +32,9 @@ public class Kentta extends JPanel {
      * Alustaa kentän
      * @param kenttaNro alustettavan kentän numero 
      */
-    public void alusta(int kenttaNro){
+    public void alusta(int kenttaNro) {
         this.kenttaNro = kenttaNro;
-        if(laskuri == null || peliOhi){
+        if (laskuri == null || peliOhi) {
             laskuri = new PisteLaskuri();
         }
         
@@ -59,11 +59,11 @@ public class Kentta extends JPanel {
         peliOhi = false;
         kenttaLapi = false;
         viesti = new Viesti(this);
-        if(paivittaja == null){
+        if (paivittaja == null) {
             paivittaja = new Paivittaja(this);
             timer = new Timer();
             timer.scheduleAtFixedRate(paivittaja, 100, 12);  
-        }else{
+        } else {
             paivittaja.setKentta(this);
             this.repaint();
         }   
@@ -73,7 +73,7 @@ public class Kentta extends JPanel {
         return blockerit;
     }
     
-    public int getKenttaNro(){
+    public int getKenttaNro() {
         return this.kenttaNro;
     }
   
@@ -89,11 +89,11 @@ public class Kentta extends JPanel {
         return this.viesti;
     }    
     
-    public boolean getPeliOhi(){
+    public boolean getPeliOhi() {
         return this.peliOhi;
     }
     
-    public boolean kenttaVoitettu(){
+    public boolean kenttaVoitettu() {
         return this.kenttaLapi;
     }    
     
@@ -101,7 +101,7 @@ public class Kentta extends JPanel {
      * Metodi aloittaa pelin/jatkaa peliä
      */
     public void start() {     
-        if(!peliOhi){
+        if (!peliOhi) {
             paalla = true;
             viesti.paivitaViesti();             
         }

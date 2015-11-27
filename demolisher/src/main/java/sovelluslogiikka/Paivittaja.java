@@ -29,7 +29,7 @@ public class Paivittaja extends TimerTask {
      * Setterimetodi testejä varten
      * @param blockerit lista blockereita
      */
-    public void setBlockerit(ArrayList<Blockeri> blockerit){
+    public void setBlockerit(ArrayList<Blockeri> blockerit) {
         this.blockerit = blockerit;
     }
     
@@ -38,19 +38,19 @@ public class Paivittaja extends TimerTask {
      */
     public void poistaDeaktiivisetLaatat() {
         ArrayList<Blockeri> poistot = new ArrayList<>();
-        for(Blockeri blockeri:blockerit){
-            if(blockeri.getClass().equals(Laatta.class)){
+        for ( Blockeri blockeri:blockerit) {
+            if (blockeri.getClass().equals(Laatta.class)) {
                 Laatta laatta = (Laatta) blockeri;
-                if(!laatta.aktiivinen()){
+                if (!laatta.aktiivinen()) {
                     poistot.add(blockeri);
                 }
             }
             
         }
-        for(Blockeri blockeri : poistot){
+        for (Blockeri blockeri : poistot) {
             blockerit.remove(blockeri);
         }
-        if(blockerit.size() == 1){
+        if (blockerit.size() == 1) {
             kentta.kaikkiLaatatTuhottu();
         }
     }
@@ -71,7 +71,7 @@ public class Paivittaja extends TimerTask {
             lauta.tormaa(pallo);
             kentta.repaint();    
         } 
-        if(pallo.tarkistaPelinLoppuminen()){
+        if (pallo.tarkistaPelinLoppuminen()) {
             kentta.lopetaPeli();
         }        
     }

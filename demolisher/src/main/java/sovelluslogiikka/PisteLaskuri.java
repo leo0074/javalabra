@@ -7,11 +7,11 @@ import java.awt.Graphics;
  */
 public class PisteLaskuri {
     private int pisteet;
-    public PisteLaskuri(){
+    public PisteLaskuri() {
         pisteet = 0;
     }
     
-    public int getPisteet(){
+    public int getPisteet() {
         return pisteet;
     }
     

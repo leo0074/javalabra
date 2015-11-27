@@ -37,4 +37,4 @@ Pistelaskuri lisätty. Peli tunnistaa milloin pallo menee kentän alaosasta yli.
 Kentän vaihto ja alusta aloittaminen. 3h
 
 25.11.2015
-Testien päivittämistä ja javadockeja
+Testien päivittämistä ja javadockeja. 2h

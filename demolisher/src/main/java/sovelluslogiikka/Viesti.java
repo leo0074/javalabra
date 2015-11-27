@@ -14,7 +14,7 @@ public class Viesti {
         this.viesti = "Aloita peli painamalla s";
     }
     
-    public String getViesti(){
+    public String getViesti() {
         return this.viesti;
     }    
     
@@ -41,7 +41,7 @@ public class Viesti {
     /**
      * Metodi asettaa viestin kenttä läpäisty kun laatat on tuhottu
      */
-    public void kenttaLapi(){
+    public void kenttaLapi() {
         viesti = "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan kenttään";
     }
         
