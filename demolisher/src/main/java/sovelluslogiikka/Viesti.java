@@ -7,7 +7,13 @@ import kayttoliittyma.Kentta;
  *Luokka piirtää näkymän tilasta riippuvan viestin pelikentän alareunaan.
  */
 public class Viesti {
+    /**
+     * Viestiteksti
+     */
     private String viesti;
+    /**
+     * Kenttä, johon viesti liittyy
+     */
     private Kentta kentta;
     public Viesti(Kentta kentta) {
         this.kentta = kentta;

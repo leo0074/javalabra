@@ -11,16 +11,45 @@ import sovelluslogiikka.*;
  * Luokka kokoaa pelissä olevat objektit ja tietää onko peli käynnissä vai ei.
  */
 public class Kentta extends JPanel {
+    /**
+     * Lista esteistä
+     */
     private ArrayList<Blockeri> blockerit;
+    /**
+     * Kentän pallo
+     */
     private Pallo pallo;
+    /**
+     * Kentän lauta
+     */
     private Lauta lauta;
+    /**
+     * Kentän päivittäjä
+     */
     private Paivittaja paivittaja;
-    private Timer timer;
+    /**
+     * Muuttuja kertoo, että onko peli käynnissä
+     */
     private boolean paalla;
+    /**
+     * Muuttuja kertoo, että onko pallo mennyt kentän yli
+     */
     private boolean peliOhi;
+    /**
+     * Muuttuja kertoo, onko kenttä läpäisty
+     */
     private boolean kenttaLapi;
+    /**
+     * Kentän viestiolio
+     */
     private Viesti viesti;
+    /**
+     * Kenttään liittyvä pistelaskuri
+     */
     private PisteLaskuri laskuri;
+    /**
+     * Kentän numero
+     */
     private int kenttaNro;
     
     public Kentta(int kenttaNro) {
@@ -54,14 +83,13 @@ public class Kentta extends JPanel {
         }         
         pallo = new Pallo(250, 500, 1, -4);
         lauta = new Lauta(215);
-        
         paalla = false;
         peliOhi = false;
         kenttaLapi = false;
         viesti = new Viesti(this);
         if (paivittaja == null) {
             paivittaja = new Paivittaja(this);
-            timer = new Timer();
+            Timer timer = new Timer();
             timer.scheduleAtFixedRate(paivittaja, 100, 12);  
         } else {
             paivittaja.setKentta(this);

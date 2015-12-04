@@ -8,13 +8,26 @@ import java.awt.Graphics;
  * on tarkoitus tuhota
  */
 public class Laatta implements Blockeri {
-
-    private final int x; //koordinaatit osoittavan laatan oikeaan yläkulmaan
+    /**
+     * Laatan oikean yläkulman x-koordinaatti
+    */
+    private final int x;
+    /**
+     * Laatan oikean yläkulman y-koordinaatti
+     */
     private final int y; //laatan koko on 50x20
-    private final Color vari; //laatan väri
+    /**
+     * Laatan väri
+     */
+    private final Color vari;
+    /**
+     * Muuttuja kertoo, onko laatta vielä pelissä mukana
+     */
     private boolean aktiivinen;
+    /**
+     * Kenttään liittyvä pistelaskuri
+     */
     private PisteLaskuri laskuri;
-    
     public Laatta(int x, int y, Color vari, PisteLaskuri laskuri) {
         this.x = x;
         this.y = y;

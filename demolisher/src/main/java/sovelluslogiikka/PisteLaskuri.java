@@ -6,6 +6,9 @@ import java.awt.Graphics;
  * Pisteluokka, joka pitää kirjaa pisteistä. 
  */
 public class PisteLaskuri {
+    /**
+     * Pisteiden määrä
+     */
     private int pisteet;
     public PisteLaskuri() {
         pisteet = 0;

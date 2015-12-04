@@ -3,6 +3,6 @@ Demolition-tyyppinen peli, missä pelaaja ohjaan ruudun alaosassa olevaa lautaa,
 Pelin ideana on tuhota pallolla kaikki kentän yläosassa sijaitsevat laatat päästämttä palloa karkaamaan kentän alaosasta
 Käyttäjät: pelaaja
 pelaajan toiminnot:
-	kentän valitseminen
 	laudan siirtäminen kentässä hiiren avulla
 	pelin aloittaminen ja keskeyttäminen
+	seuraavaan kenttään siirtyminen

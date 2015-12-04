@@ -12,7 +12,9 @@ import sovelluslogiikka.Reunat;
  * jatkaa.
  */
 public class Nappaimisto implements KeyListener {
-    private Kayttoliittyma liittyma;
+    /**
+     * Kenttä, jonka tilaa muutetaan
+     */
     private Kentta kentta;
     public Nappaimisto(Kentta kentta, Kayttoliittyma liittyma) {
         this.kentta = kentta;

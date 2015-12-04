@@ -9,9 +9,21 @@ import java.util.TimerTask;
  * Lisäksi luokka laittaa kentän uudelleenpiirtämään näkymän. 
  */
 public class Paivittaja extends TimerTask {
+    /**
+     * Kentän pallo
+     */
     private Pallo pallo;
+    /**
+     * Kentän esteet
+     */
     private ArrayList<Blockeri> blockerit;
+    /**
+     * Kentän Lauta
+     */
     private Lauta lauta;
+    /**
+     * Kenttä, jota päivittäjä päivittää
+     */
     private Kentta kentta;
     
     public Paivittaja(Kentta kentta) {
@@ -38,7 +50,7 @@ public class Paivittaja extends TimerTask {
      */
     public void poistaDeaktiivisetLaatat() {
         ArrayList<Blockeri> poistot = new ArrayList<>();
-        for ( Blockeri blockeri:blockerit) {
+        for (Blockeri blockeri:blockerit) {
             if (blockeri.getClass().equals(Laatta.class)) {
                 Laatta laatta = (Laatta) blockeri;
                 if (!laatta.aktiivinen()) {

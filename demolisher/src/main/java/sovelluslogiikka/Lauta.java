@@ -10,7 +10,13 @@ import java.awt.PointerInfo;
  * hiiren avulla
  */
 public class Lauta implements Blockeri {
-    int x; //laudan vasemman osan x-koordinaatti
+    /**
+     * Laudan vasemman yläreunan x-koordinaatti
+     */
+    int x;
+    /**
+     * Laudan vasemman yläreunan y-koordinaatti
+     */
     int y; 
     public Lauta(int x) {
         this.x = x;

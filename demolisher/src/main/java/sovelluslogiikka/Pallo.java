@@ -8,13 +8,30 @@ import java.awt.Graphics;
  * törmäilee esteisiin.
  */
 public class Pallo {
-    private int x; //koordinaatit osoittavat pallon keskipisteeseen.
-    private int y; //pallon halkaisija on tässä pelissä 10 pikseliä
+    /**
+     * Pallon keskipisteen x-koordinaatti
+     */
+    private int x; 
+    /**
+     * Pallon keskipisteen y-koordinaatti
+     */
+    private int y;
+    /**
+     * Pallon x suuntainen liikenopeus
+     */
     private int dx; //pallon x-suunnan liikenopeus
-    private int dy; //pallon y-suunnan liikenopeus
+    /**
+     * Pallon y suuntainen liikenopeus
+     */
+    private int dy;
+    /**
+     * Laskurimuuttuja, jota kasvatetaan aina kun pallo liikkuu
+     */
     private int kierros;
+    /**
+     * Muuttuja kertoo millä laskurimuuttujan arvolla pallo on viimeksi kääntynyt.
+     */
     private int kaantynytViimeksi;
-    
     public Pallo(int x, int y, int dx, int dy) {
         this.x = x;
         this.y = y;
