@@ -40,4 +40,7 @@ Kentän vaihto ja alusta aloittaminen. 3h
 Testien päivittämistä ja javadockeja. 2h
 
 30.11.2015
-Javadackien hienosäätöä. 1h
+Javadockien hienosäätöä. 1h
+
+4.12.2014
+Sekvenssikaaviot ja dokumentaation korjailua. 2h.
