@@ -52,7 +52,7 @@ public class KenttaTest {
        kentta.kaikkiLaatatTuhottu();
        assertFalse(kentta.onPaalla());
        assertTrue(kentta.kenttaVoitettu());
-       assertEquals(kentta.getViesti().getViesti(), "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan kenttään");     
+       assertEquals(kentta.getViesti().getViesti(), "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan");     
     }
     
     @Test

@@ -48,7 +48,7 @@ public class Viesti {
      * Metodi asettaa viestin kenttä läpäisty kun laatat on tuhottu
      */
     public void kenttaLapi() {
-        viesti = "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan kenttään";
+        viesti = "Kenttä läpäisty! Paina n siirtyäksesi seuraavaan";
     }
         
     
@@ -56,6 +56,6 @@ public class Viesti {
     * Metodi piirtää viestin kentälle.
     */
     public void paint(Graphics g) {
-        g.drawString(viesti, 100, 600);
+        g.drawString(viesti, 90, 600);
     }    
 }

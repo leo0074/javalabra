@@ -2,10 +2,7 @@ package kayttoliittyma;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 import main.Kayttoliittyma;
-import sovelluslogiikka.Blockeri;
-import sovelluslogiikka.Reunat;
 
 /**
  * Luokka kuuntelee näppäimistöä, jonka avulla pelin voi aloittaa, pysäyttää tai

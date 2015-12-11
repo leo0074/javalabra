@@ -7,10 +7,10 @@ Projektin pystytys ja konffaus 3h
 Projektin hahmottelua ja luokkien sekä niiden testien alustavaa kokoamista. 3h
 
 5.11.2015:
-Luokka lisää ja testejä 2h
+Lisää luokkia ja testejä 2h
 
 6.11.2015.
-Koordinaaitston suunnittelu, Laattaluokan lisäys, luokkakaavion piirto. 5h
+Koordinaaitiston suunnittelu, Laattaluokan lisäys, luokkakaavion piirto. 5h
 
 8.11.2015
 Mutanttien tappoa sekä uusia luokkia ja testejä 3h
