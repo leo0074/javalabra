@@ -42,5 +42,11 @@ Testien päivittämistä ja javadockeja. 2h
 30.11.2015
 Javadockien hienosäätöä. 1h
 
-4.12.2014
+4.12.2015
 Sekvenssikaaviot ja dokumentaation korjailua. 2h.
+
+11.12.2015
+Demotilaisuuteen valmistelua. 2h
+
+12.12.2015
+Lopullisen palautuksen täydentämistä. 2h
